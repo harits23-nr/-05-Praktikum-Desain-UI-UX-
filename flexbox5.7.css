@@ -1,0 +1,87 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      color: white;
+    }
+
+    /* Wadah utama berwarna pink, disusun vertikal */
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      min-height: 100vh;
+      padding: 12px;
+      background-color: #0FAB0E;
+    }
+
+    header,
+    footer {
+      flex: 0 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #99d1c9;
+    }
+
+    /* Baris tengah: Aside di kiri, Article di kanan */
+    .middle {
+      flex: 1;
+      display: flex;
+      gap: 12px;
+    }
+
+    aside {
+      flex: 0 0 18%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #5fb3b3;
+    }
+
+    article {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 12px;
+      background-color: #681209;
+    }
+
+    .article-title {
+      text-align: center;
+    }
+
+    /* Tiga gambar sejajar di bagian bawah Article */
+    .images {
+      margin-top: auto;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .image {
+      flex: 0 0 90px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #d9d9d9;
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      .middle {
+        flex-direction: column;
+      }
+      aside {
+        flex-basis: 80px;
+      }
+      .images {
+        flex-wrap: wrap;
+      }
+    }
